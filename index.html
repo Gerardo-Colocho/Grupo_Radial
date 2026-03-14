@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Radio Portal Pro | Premium Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;900&display=swap" rel="stylesheet">
+</head>
+<body class="theme-mega">
+    <div class="blob-c">
+        <div class="shape-blob one"></div>
+        <div class="shape-blob two"></div>
+        <div class="shape-blob three"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="navbar-v4">
+            <div class="live-status-pill">
+                <span class="pulse-dot"></span> <span id="status-text">LA MEGA 95.3</span>
+            </div>
+            <button class="menu-trigger-v4" id="openMenu">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+        </header>
+
+        <div class="station-tab-switcher">
+            <button class="tab-btn active" id="btn-mega" onclick="switchRadio('mega')">La Mega</button>
+            <button class="tab-btn" id="btn-buena" onclick="switchRadio('buena')">La Más Buena</button>
+        </div>
+
+        <main class="player-core-v4">
+            <div class="artwork-display-v4 anim-fade" id="art-container">
+                <div class="artwork-shadow"></div>
+                <img src="Gemini_Generated_Image_xo5ii7xo5ii7xo5i.png" id="main-logo" class="logo-premium">
+            </div>
+
+            <div class="metadata-v4 anim-fade" id="text-container">
+                <h1 id="radio-name">LA MEGA <span>95.3</span></h1>
+                <p id="radio-slogan">"Desde Ciudad Arce para el Mundo"</p>
+            </div>
+
+            <div class="visualizer-wave-v4" id="viz">
+                <div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div>
+                <div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div>
+                <div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div>
+            </div>
+
+            <div class="controls-v4">
+                <button id="master-play" class="play-btn-v4">
+                    <i class="fa-solid fa-play" id="play-icon"></i>
+                </button>
+            </div>
+            
+            <div class="volume-bar-v4">
+                <i class="fa-solid fa-volume-low"></i>
+                <input type="range" id="vol-slider" min="0" max="1" step="0.05" value="0.8">
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal-blur-v4" id="modal">
+        <div class="modal-sheet-v4">
+            <div class="modal-header-v4">
+                <div class="drag-handle-v4"></div>
+                <div class="close-container-v4">
+                    <button class="close-modal-v4" id="closeMenu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-content-v4">
+                <section class="info-group-v4">
+                    <label>CONÉCTATE</label>
+                    <div class="social-grid-v4">
+                        <a href="#" id="wa-link" target="_blank" class="social-item-v4 wa"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#" id="fb-link" target="_blank" class="social-item-v4 fb"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" id="tk-link" target="_blank" class="social-item-v4 tk"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </section>
+
+                <section class="info-group-v4">
+                    <label>NUESTROS LOCUTORES</label>
+                    <div id="locutores-grid" class="locutores-grid-v4"></div>
+                </section>
+
+                <section class="info-group-v4">
+                    <label>ADMINISTRACIÓN</label>
+                    <div id="admin-grid" class="locutores-grid-v4"></div>
+                </section>
+
+                <section class="info-group-v4">
+                    <label>NUESTRA UBICACIÓN</label>
+                    <div class="location-card-v4">
+                        <p id="m-addr-full"></p>
+                        <a href="#" id="maps-link" target="_blank" class="btn-maps">
+                            <i class="fa-solid fa-location-dot"></i> Cómo llegar
+                        </a>
+                    </div>
+                </section>
+
+                <section class="info-group-v4">
+                    <button class="accordion-trigger" onclick="toggleValues()">
+                        <span>SABER MÁS</span> <i class="fa-solid fa-chevron-down" id="val-icon"></i>
+                    </button>
+                    <div class="accordion-content" id="values-content">
+                        <div class="value-item"><h5>Misión</h5><p id="m-mision"></p></div>
+                        <div class="value-item"><h5>Visión</h5><p id="m-vision"></p></div>
+                    </div>
+                </section>
+
+                <div class="info-footer-v4">
+                    <div class="footer-item-v4">
+                        <label>HORARIOS DE CABINA</label>
+                        <p id="m-hours"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
